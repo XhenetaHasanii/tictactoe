@@ -1,1 +1,1 @@
-Implementation of TicTacToe game by Java
+Implementation of Tic-Tac-Toe game by Java 
