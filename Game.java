@@ -13,7 +13,21 @@ public class Game
             this.playerTwo=playerTwo;
             char [][] gameField=new char[3][3];
     }
-  for(int j = 0; j < 3; j++) {
+    public void getUserInput ()
+    {
+        Scanner scanner=new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Please enter X or 0");
+        //char symbol=sc.next().charAt(0);
+        gameField[0][0]=sc.next().charAt(0);
+        System.out.println(Arrays.deepToString(gameField));
+        System.out.println("Please enter X or 0");
+        gameField[0][1]=scanner.next().charAt(0);
+        System.out.println(Arrays.deepToString(gameField)).replace("],","\n").replace(",","\t| ")
+                .replaceAll("[\\[\\]]", " "));;
+
+    }
+  /**for(int j = 0; j < 3; j++) {
             if(board[0][j] == board[1][j] && board[1][j] == board[2][j] && board[0][j] != '-') {
                 return board[0][j];
             }
@@ -29,4 +43,4 @@ public class Game
         
         return ' ';
 
-    }
+    } /** 
