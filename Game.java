@@ -19,7 +19,6 @@ public class Game
             }
         }
 
-        //Check the diagonals
         if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != '-') {
             return board[0][0];
         }
@@ -27,7 +26,7 @@ public class Game
             return board[2][0];
         }
 
-        //Otherwise nobody has not won yet
+        
         return ' ';
 
     }
