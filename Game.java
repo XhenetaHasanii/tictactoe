@@ -24,7 +24,7 @@ public class Game
         System.out.println("Please enter X or 0");
         gameField[0][1]=scanner.next().charAt(0);
         System.out.println(Arrays.deepToString(gameField)).replace("],","\n").replace(",","\t| ")
-                .replaceAll("[\\[\\]]", " "));;
+                .replaceAll("[\\[\\]]", " "));
 
     }
   /**for(int j = 0; j < 3; j++) {
