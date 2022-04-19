@@ -1,11 +1,18 @@
-public class Player{
-    private String name;
-    private  char symbol;
+public class Player {
 
-    public Player( String name,char symbol){
-        this.name=name;
-        this.symbol=symbol;
-    }
+  private String playerName;
+  private char playerSign;
 
+  public Player(String p_playerName, char p_playerSign) {
+    playerName = p_playerName;
+    playerSign = p_playerSign;
+  }
 
+  public String getPlayerName() {
+    return playerName;
+  }
+
+  public char getPlayerSign() {
+    return playerSign;
+  }
 }
