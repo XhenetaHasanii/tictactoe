@@ -1,7 +1,10 @@
 # TicTacToe Console Game
 
 Implementation of Tic-Tac-Toe as a console game in Java.
+
 Learning and manipulating 2D Arrays.
+
+An idea on improving this application is by building a GUI Application using JavaFX.
 
 A sample picture of the console game:
 
