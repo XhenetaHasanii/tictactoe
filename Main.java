@@ -1,27 +1,42 @@
-import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
- public class Main {
+public class Main {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
+    System.out.println("Welcome to Tic Tac Toe Game");
+    System.out.println("The symbols of the game are 'X' and 'O'");
+    char playerOneSymbol = ' ';
+    char playerTwoSymbol = ' ';
+    ArrayList<Character> acceptableSymbols = new ArrayList<>();
+    acceptableSymbols.add('X');
+    acceptableSymbols.add('O');
 
-            Player playerOne=new Player( "Xheni",'O' );
-            Player playerTwo=new Player( "Tini",'X' );
-            Game game= new Game(playerOne,playerTwo);
-           // game.printGameFieldOnScreen();
-            char[][] gameField=new char[3][3];
-            Scanner scanner=new Scanner(System.in);
-            Scanner sc=new Scanner(System.in);
-            System.out.println("Please enter X or 0");
-            //char symbol=sc.next().charAt(0);
-            gameField[0][0]=sc.next().charAt(0);
-            System.out.println(Arrays.deepToString(gameField).replace("],","\n").replace(",","\t| ")
-                    .replaceAll("[\\[\\]]", " "));
-            System.out.println("Please enter X or 0");
-            gameField[0][1]=scanner.next().charAt(0);
-            System.out.println(Arrays.deepToString(gameField).replace("],","\n").replace(",","\t| ")
-                    .replaceAll("[\\[\\]]", " "));
-            System.out.println("Please select the position you want to play");
+    System.out.println("Player one, please enter your name: ");
+    Scanner playerOneScanner = new Scanner(System.in);
+    String playerOneName = playerOneScanner.nextLine();
+    System.out.println("Player two, please enter your name: ");
+    Scanner playerTwoScanner = new Scanner(System.in);
+    String playerTwoName = playerTwoScanner.nextLine();
 
+    while (acceptableSymbols.contains(playerOneSymbol) == false) {
+      System.out.println("Player one, please enter your symbol: ");
+      Scanner sc = new Scanner(System.in);
+      playerOneSymbol = sc.nextLine().charAt(0);
     }
+    while (acceptableSymbols.contains(playerTwoSymbol) == false) {
+      System.out.println("Player two, please enter your symbol: ");
+      Scanner sc = new Scanner(System.in);
+      playerTwoSymbol = sc.nextLine().charAt(0);
+    }
+
+    Player playerOne = new Player(playerOneName, playerOneSymbol);
+    Player playerTwo = new Player(playerTwoName, playerTwoSymbol);
+
+    Game game = new Game(playerOne, playerTwo);
+    while (game.isGameOver() != true) {
+      game.getUserInput();
+    }
+
+  }
 }
