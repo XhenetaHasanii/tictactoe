@@ -6,7 +6,7 @@ Learning and manipulating 2D Arrays.
 
 An idea on improving this application is by building a GUI Application using JavaFX.
 
-The game field is a 2x2 array (0 until 2 for row and for column coordinate).
+The game field is a 2x2 array (0 until 2 for row and for column coordinate). An input above 3 for row or column will be ignored and the user must write the coordinates again.
 
 A sample picture of the console game:
 
